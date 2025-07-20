@@ -123,7 +123,7 @@ class MainWindow(QMainWindow):
         self.window_layout.addWidget(self.progress_bar)
         self.window_widget.setLayout(self.window_layout)
         self.setCentralWidget(self.window_widget)
-        self.setWindowTitle("Quick Renamer")
+        self.setWindowTitle("simple-tvshow-renamer")
         self.setFixedSize(self.size())
 
     def _open_file_explorer(self):
