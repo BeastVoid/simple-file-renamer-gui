@@ -37,4 +37,4 @@ After the filename, an autoincremental number will be added starting with the nu
 
 ## Download
 
-Go to the [Releases section](/releases/latest).
+Go to the [Releases section](https://github.com/BeastVoid/simple-file-renamer-gui/releases/latest).
