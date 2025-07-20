@@ -103,12 +103,13 @@ class MainWindow(QMainWindow):
         # naming_layout.addWidget(quick_name_pattern_widget)
         naming_widget.setLayout(naming_layout)
 
-        # Window settings
+        # MainWindow settings
         self.window_widget = QWidget()
         self.window_layout = QVBoxLayout()
         self.rename_files_button = QPushButton("Rename files in the directory")
         self.rename_files_button.setFixedHeight(50)
         self.rename_files_button.clicked.connect(self._rename_files)
+        self.rename_files_button.setEnabled(False)
         self.progress_bar = QProgressBar()
         self.progress_bar.setValue(0)
         status_font = QFont()
@@ -123,15 +124,19 @@ class MainWindow(QMainWindow):
         self.window_layout.addWidget(self.progress_bar)
         self.window_widget.setLayout(self.window_layout)
         self.setCentralWidget(self.window_widget)
-        self.setWindowTitle("simple-tvshow-renamer")
+        self.setWindowTitle("simple-file-renamer-gui")
+        self.setMinimumWidth(600)
+        self.adjustSize()
         self.setFixedSize(self.size())
 
     def _open_file_explorer(self):
         self.file_dialog = QFileDialog(self)
         self.file_dialog.setFileMode(QFileDialog.FileMode.Directory)
         if self.file_dialog.exec():
+            self.rename_files_button.setEnabled(False)
             directory = self.file_dialog.selectedFiles()[0]
             if directory:
+                self.rename_files_button.setEnabled(True)
                 self.str_folder_path = str(Path(directory))
                 self.folder_path.setText(self.str_folder_path)
 
