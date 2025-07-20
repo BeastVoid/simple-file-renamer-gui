@@ -1,11 +1,11 @@
 # simple-file-renamer-gui, GUI tool for renaming files in a directory
 ## How to use
-1. Select the directory which has all the files you wish to rename.
+1. Select the directory which has all the files you wish to rename
 
 ![Open file explorer button](assets/imgs/select_directory.png)
 
 > [!CAUTION]
-> Every file in the chosen directory will be renamed. Be sure that only files that you want to rename are in the directory before proceeding
+> Every file in the chosen directory will be renamed. Be sure that only files that you want to rename are in the directory before proceeding.
 
 2. Choose in which order should the files in the directory be renamed
 
@@ -37,3 +37,4 @@ After the filename, an autoincremental number will be added starting with the nu
 
 ## Download
 
+Go to the [Releases section](/releases/latest).
